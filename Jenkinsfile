@@ -1,33 +1,33 @@
-pipeline {
+pipeline 
+{
     agent any
 
-    stages {
-        stage ('Composer Install') {
-
-            steps {
+    stages 
+    {
+        stage ('Composer Install') 
+        {
+            steps 
                  {
-                    sh 'composer install'
-                    
-                }
-            }
-        }
+                   sh 'composer install'
+                 }
+          
+         }
 
-        stage ('Testing Stage') {
-
-            steps {
+        stage ('Testing Stage') 
+        {
+            steps 
                  {
                     sh 'npm install'
-                }
-            }
+                 }
+            
         }
-
-
-        stage ('Install Stage') {
-            steps {
+        stage ('Install Stage') 
+        {
+            steps 
                  {
                     sh 'npm run dev'
-                }
-            }
+                 }
+            
         }
     }
 }
